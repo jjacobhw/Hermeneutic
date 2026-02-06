@@ -22,7 +22,7 @@ The multi-source RAG system allows you to:
 │   Multi-Source RAG Service          │
 ├─────────────────────────────────────┤
 │ Query multiple collections:         │
-│  ├─ Bible (ESV verses)             │
+│  ├─ Bible verses                   │
 │  ├─ Commentary                      │
 │  ├─ Study Notes                     │
 │  ├─ Theological Texts              │
@@ -42,7 +42,7 @@ The multi-source RAG system allows you to:
 
 | Collection | Purpose | Example Documents |
 |-----------|---------|------------------|
-| `bible` | ESV Bible verses | Genesis 1:1-31, John 3:16 |
+| `bible` | Bible verses | Genesis 1:1-31, John 3:16 |
 | `commentary` | Biblical commentaries | Matthew Henry, John Gill |
 | `study_notes` | Study notes & devotionals | Daily readings, sermon notes |
 | `theological` | Theological texts | Systematic theology, doctrines |
@@ -50,14 +50,7 @@ The multi-source RAG system allows you to:
 
 ## Getting Started
 
-### 1. Ingest Bible Verses (Primary Collection)
-
-```bash
-cd server
-python scripts/ingest_bible.py data/bible_structured.json
-```
-
-### 2. Add Commentary Documents
+### 1. Add Commentary Documents
 
 **From PDF:**
 ```bash
@@ -77,7 +70,7 @@ python scripts/ingest_additional_documents.py \
   --pattern "**/*.pdf"
 ```
 
-### 3. Add Study Notes
+### 2. Add Study Notes
 
 **From text files:**
 ```bash
@@ -87,7 +80,7 @@ python scripts/ingest_additional_documents.py \
   --format txt
 ```
 
-### 4. Add Theological Texts
+### 3. Add Theological Texts
 
 **From JSON:**
 ```bash
@@ -215,8 +208,8 @@ curl http://localhost:8000/collections
 - Barnes' Notes on the Bible
 
 **Study Resources:**
-- ESV Study Bible notes
-- NIV Study Bible notes
+- Study Bible notes
+- Bible dictionaries
 - Holman Bible Dictionary
 
 **Theological Texts:**

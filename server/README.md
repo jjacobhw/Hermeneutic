@@ -5,7 +5,7 @@ Backend API for the Hermeneutic Bible study application with multi-source RAG ca
 ## Features
 
 - **Multi-Collection Vector Store**: Store different document types in separate ChromaDB collections
-- **Bible Verse Retrieval**: ESV Bible verses optimized for RAG
+- **Bible Verse Retrieval**: Bible verses optimized for RAG
 - **Commentary Integration**: Add biblical commentaries for deeper insights
 - **Study Notes**: Include study notes and devotional materials
 - **Theological Texts**: Integrate systematic theology and doctrinal resources
@@ -31,17 +31,7 @@ LLM_MODEL=anthropic/claude-3.5-sonnet
 CHROMA_PERSIST_DIR=./chroma_db
 ```
 
-### 3. Preprocess Bible PDF
-
-```bash
-# Run preprocessing
-python scripts/preprocess_esv_pdf.py data/english-standard-version-Bible.pdf --output data/bible_structured.json
-
-# Ingest into ChromaDB
-python scripts/ingest_bible.py data/bible_structured.json
-```
-
-### 4. Add Additional Documents (Optional)
+### 3. Add Documents (Optional)
 
 ```bash
 # Add commentaries
@@ -57,7 +47,7 @@ python scripts/ingest_additional_documents.py \
   --format txt
 ```
 
-### 5. Start Server
+### 4. Start Server
 
 ```bash
 uvicorn app.main:app --reload
@@ -93,7 +83,7 @@ GET /collections
 
 ## Available Collections
 
-- `bible` - ESV Bible verses
+- `bible` - Bible verses
 - `commentary` - Biblical commentaries
 - `study_notes` - Study notes and devotionals
 - `theological` - Theological texts
@@ -108,15 +98,12 @@ GET /collections
 
 ```
 data/
-  ├── bible_structured.json          # Preprocessed Bible verses
   ├── commentaries/                  # Commentary PDFs
   ├── notes/                         # Study notes
   └── theology/                      # Theological texts
 
 scripts/
-  ├── preprocess_esv_pdf.py         # Extract verses from PDF
-  ├── ingest_bible.py               # Ingest Bible to ChromaDB
-  └── ingest_additional_documents.py # Ingest other documents
+  └── ingest_additional_documents.py # Ingest documents
 
 app/
   ├── services/

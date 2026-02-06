@@ -20,7 +20,7 @@ class MultiCollectionStore:
 
     # Define available collections
     COLLECTIONS = {
-        "bible": "bible_esv",
+        "bible": "bible",
         "commentary": "bible_commentary",
         "study_notes": "study_notes",
         "theological": "theological_texts",

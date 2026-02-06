@@ -55,7 +55,7 @@ async def query_multi(request: MultiSourceRequest):
     like commentaries, study notes, and theological texts for richer context.
 
     Available collections:
-    - bible: ESV Bible verses
+    - bible: Bible verses
     - commentary: Biblical commentaries
     - study_notes: Study notes and devotional materials
     - theological: Theological texts and doctrinal resources

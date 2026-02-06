@@ -11,7 +11,7 @@ class Settings:
     EMBEDDING_MODEL: str = os.getenv(
         "EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2"
     )
-    COLLECTION_NAME: str = "bible_esv"
+    COLLECTION_NAME: str = "bible"
 
 
 settings = Settings()
