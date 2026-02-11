@@ -1,13 +1,15 @@
 # FastAPI
 fastapi==0.115.0
 uvicorn[standard]==0.30.6
-python-multipart==0.0.9
+python-multipart==0.0.9pipp
 
-# LangChain
+# LangChain - 0.3.x stable ecosystem
 langchain==0.3.7
+langchain-core==0.3.51
 langchain-community==0.3.7
 langchain-huggingface==0.1.2
-langchain-text-splitters>=0.0.3
+langchain-text-splitters==0.3.8
+langsmith==0.1.125
 
 # PDF Processing
 pypdf==4.0.1
